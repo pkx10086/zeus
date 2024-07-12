@@ -25,7 +25,6 @@ def main(path):
     print(json.loads(response.text))
     if response.status_code == 200:
         resp = response.json()
-        print(resp)
         if resp["err_no"] == 0:
             result = resp["result"]
             for resut in result:
