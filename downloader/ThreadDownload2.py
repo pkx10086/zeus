@@ -63,7 +63,7 @@ def download_file_concurrently(url, output_file, num_threads=5):
     if os.path.exists(output_file):
         local_size = os.path.getsize(output_file)
         if local_size >= total_size:
-            print("文件已经下载完成。")
+            print("\n文件已经下载完成。")
             return
 
     # 计算每个分片的大小以供并发下载
@@ -102,4 +102,5 @@ if __name__ == '__main__':
     print('作者:panKx date:2024-07-24')
     print('*' * 100)
     url = input('请输入需要下载的文件链接:\n')
-    download_file_concurrently(url, "video.mp4")
+    output_file = input('请输入需要输出的文件名:\n')
+    download_file_concurrently(url, output_file)
