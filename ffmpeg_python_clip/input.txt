@@ -1,0 +1,3 @@
+file 'temp0.ts'
+file 'temp1.ts'
+file 'temp2.ts'
